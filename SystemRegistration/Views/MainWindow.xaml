@@ -1,0 +1,56 @@
+﻿<Window x:Name="Register" x:Class="SystemRegistration.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SystemRegistration"
+        mc:Ignorable="d"
+        Title="Register" MinHeight="520" MinWidth="525" Width="525" Background="#FF22242B" Initialized="Register_Initialized" Icon="/SystemRegistration;component/Assets/logo.ico" >
+    <StackPanel Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="2"  Height="520" Width="525">
+        <Label Width="100" Height="30" Content="Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0" Foreground="White" ></Label>
+        <TextBox Name="nameTxt" Width="300" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-30,0,0" FontSize="21" Background="#FF343949" BorderBrush="#FF617ED6" SelectionBrush="#FF004589" Foreground="White"></TextBox>
+        <Label Width="100" Height="30" Content="Surname" HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="0,10,0,0" Foreground="White"></Label>
+        <TextBox Name="surnameTxt" Width="300" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-30,0,0" FontSize="21" Background="#FF343949" BorderBrush="#FF617ED6" SelectionBrush="#FF004589" Foreground="White"></TextBox>
+        <Label Width="100" Height="30" Content="Nick" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0" Foreground="White"></Label>
+        <TextBox Name="nickTxt" Width="300" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-30,0,0" FontSize="21" Background="#FF343949" BorderBrush="#FF617ED6" SelectionBrush="#FF004589" Foreground="White"></TextBox>
+        <Label Width="100" Height="30" Content="Email" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0" Foreground="White"></Label>
+        <TextBox Name="emailTxt" Width="300" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-30,0,0" FontSize="21" Background="#FF343949" BorderBrush="#FF617ED6" SelectionBrush="#FF004589" Foreground="White"></TextBox>
+        <Label Width="100" Height="30" Content="Date of birth" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0" Foreground="White"></Label>
+        <DatePicker Name="dataBox" Height="30" Width="300" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-30,0,0" Background="#FF343949" Foreground="Black">
+            <DatePicker.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,0" StartPoint="0.5,1">
+                    <GradientStop Color="#FFA3AEB9" Offset="0"/>
+                    <GradientStop Color="#FF8399A9" Offset="0.375"/>
+                    <GradientStop Color="#FF718597" Offset="0.375"/>
+                    <GradientStop Color="#FF617ED6" Offset="1"/>
+                </LinearGradientBrush>
+            </DatePicker.BorderBrush>
+        </DatePicker>
+        <Label Width="100" Height="30" Content="Password" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0" Foreground="White"></Label>
+        <PasswordBox Name="passbox" Width="300" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-30,0,0" FontSize="21" Background="#FF343949" BorderBrush="#FF617ED6" SelectionBrush="#FF004589" Foreground="White"></PasswordBox>
+        <Label Width="100" Height="30" Content="Password repeat" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0" Foreground="White"></Label>
+        <PasswordBox Name="rPassbox" Width="300" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-30,0,0" FontSize="21" Background="#FF343949" BorderBrush="#FF617ED6" SelectionBrush="#FF004589" Foreground="White"></PasswordBox>
+        <Label Width="100" Height="30" Content="Type Account" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0" Foreground="White"></Label>
+        <ComboBox Name="accountSelect" Width="300" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-30,0,0" FontSize="16">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                    <GradientStop Color="#FF343949" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+            <ComboBoxItem>Admin</ComboBoxItem>
+            <ComboBoxItem IsSelected="True">Normal</ComboBoxItem>
+        </ComboBox>
+        <Button Name="regBt" Width="100" Height="30" Content="Register" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,30,0,0" Click="regBt_Click" Foreground="White" Background="#FF3D64A8" BorderBrush="White" >
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="10" ShadowDepth="3" RenderingBias="Quality"/>
+            </Button.Effect>
+        </Button>
+        <Button Name="logBt" Content="I've got a account" FontSize="20" Background="#FF484C51" Foreground="White" Width="200" Height="50" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,50,0,0" Click="logBt_Click" BorderBrush="White">
+            <Button.Effect>
+                <DropShadowEffect RenderingBias="Quality" BlurRadius="10" ShadowDepth="3"/>
+            </Button.Effect>
+        </Button>
+        <Label Name="msg" Width="500" Height="30" Margin="10,-150,10,0" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="Red"></Label>
+    </StackPanel>
+</Window>

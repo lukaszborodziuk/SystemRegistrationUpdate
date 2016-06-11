@@ -1,0 +1,21 @@
+﻿<Window x:Class="SystemRegistration.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SystemRegistration" 
+        mc:Ignorable="d"
+        Title="Login" MinHeight="250" MinWidth="550" Height="300" Width="850" Background="#FF22242B" Icon="/SystemRegistration;component/Assets/logo.ico"  >
+    <StackPanel Grid.Column="2" Grid.Row="2" Orientation="Vertical" Height="250" Width="550">
+        <Label Content="Nick" Width="66" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,30,0,0" Foreground="White"></Label>
+        <TextBox Name="nickTxt" Width="400" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-30,0,0" FontSize="21" Background="#FF343949" BorderBrush="#FF617ED6" SelectionBrush="#FF004589" Foreground="White"></TextBox>
+        <Label Content="Password" Width="66" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,10,0,0" Foreground="White"></Label>
+        <PasswordBox Name="passTxt" Width="400" Height="30" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,-30,0,0" FontSize="21" Background="#FF343949" BorderBrush="#FF617ED6" SelectionBrush="#FF004589" Foreground="White"></PasswordBox>
+        <Label Name="msg" Content="" Width="530" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" Foreground="Red"></Label>
+        <Button Name="logBt" Width="100" Height="40" Content="Login" Background="#FF484C51" Foreground="Azure" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,30,0,0" Click="logBt_Click" RenderTransformOrigin="0.5,0.5">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="10" ShadowDepth="2" RenderingBias="Quality"/>
+            </Button.Effect>
+        </Button>
+    </StackPanel>
+</Window>
